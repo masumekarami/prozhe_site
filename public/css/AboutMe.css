@@ -1,0 +1,108 @@
+body {
+    margin: 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.BlockOne{
+    background-color: #f3c893;
+    width: 10%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.AboutMeContent{
+    text-align: right;
+    padding: 20%;
+    margin-top: 10%;
+}
+
+.BlockTwo{
+    background-color: #fcdcb6;
+    width: 45%;
+    height: 100vh;
+    position: absolute;
+    left: 137px;
+    top: 0;
+}
+
+.BlockThree{
+    background-color: #f3c893;
+    width: 45%;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.MyVideo {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30%;
+}
+
+h3{
+    color: #a3835c;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    position: absolute;
+    left: 90px;
+    top: 0;
+    width: 20%;
+}
+
+.AboutMeContent{
+    text-align: right;
+    padding: 20%;
+    margin-top: 10%;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+img{
+    width: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: 15%;
+    margin-top: 20%;
+}
+
+
+.close {
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+    width: 50%;
+    background-color: #a3835c;
+}
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 40px;
+    width: 4px;
+    background-color: #a3835c;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
+}
