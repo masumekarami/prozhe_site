@@ -36,7 +36,7 @@
                 <div cityid="88" id="CityId" style="display: none;"></div>
                 <div id="LoadPlaceAjax">
                     @foreach($gallery as $gallerys)
-                        <a id="ga" data-id="{{ $gallerys->id }}" href="">
+                        <a id="gallery" data-id="{{ $gallerys->id }}" href="">
                             <li class="li1">
                         <i class="featured-place-group ">
                                 @if($gallerys->type==1)
@@ -99,7 +99,7 @@
     </script>
 
     <script>
-        $(document).on('click', '#ga', function (e) {
+        $(document).on('click', '#gallery', function (e) {
             e.preventDefault();
             var $this = $(this);
             $.ajax({
