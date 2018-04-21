@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AboutMe</title>
+    <!--css-->
+    <!--<link rel="stylesheet" href="Gallery.css">-->
+    <link rel="stylesheet" href="AbouteMe.css">
+    <!--bootstrap-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-reboot.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+</head>
+
+<body>
+<div class="container-fluid">
+
+    <div id="asideLeft" class="asideLeft">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+        <div id="main">
+                <span style="font-size:30px;cursor:pointer;font-weight: bold;height: 150px;color: #977750;"
+                      onclick="openNav()"> &#8285;</span>
+        </div>
+        <div>
+            <img id="LogoGallery" src="IMG/LogoColor/AboutMeLogo.png"/>
+        </div>
+        <h2>AboutMe</h2>
+    </div>
+    <div id="asideRight" class="asideRight">
+        <video class="MyVideo" controls>
+            <source src="VideoGallery/rain.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <br/>
+        <div class="parentFab">
+            <input type="checkbox" id="share">
+            <label title="Share" for="share" id="share"></label>
+            <span title="facebook" id="facebook"></span>
+            <span title="twitter" id="twitter"></span>
+            <span title="Google +" id="googleplus"></span>
+            <span title="instagram" id="instagram"></span>
+            <span title="vero" id="vero"></span>
+            <span title="viber" id="viber"></span>
+            <span title="linkdin" id="linkdin"></span>
+            <span title="telegram" id="telegram"></span>
+            <span title="pinterest" id="pinterest"></span>
+            <span title="what's app" id="whatsapp"></span>
+        </div>
+
+    </div>
+    <div id="content" class="content">
+        <p>
+            What is W3Schools?
+            W3Schools is a web developers site, with tutorials and references on web development languages such as HTML,
+            CSS, JavaScript, PHP, SQL, W3.CSS, and Bootstrap, covering most aspects of web programming.
+
+            The site derives its name from the World Wide Web (W3), but is not affiliated with the W3C.
+
+            W3Schools was originally created in 1998 by Refsnes Data, a Norwegian software development and consulting
+            company.
+        </p>
+        <input class="closebtnEndX" type="button" onclick="windowClose();">
+    </div>
+
+</div>
+</body>
+</html>
+<script language="javascript" type="text/javascript">
+    function windowClose() {
+        window.open('', '_parent', '');
+        window.close();
+    }
+</script>
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "10%";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.getElementById("asideLeft").style.marginLeft = "10%";
+        document.getElementById("content").style.marginLeft = "10%";
+        document.getElementById("asideRight").style.width = "26%";
+
+
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.getElementById("asideLeft").style.marginLeft = "0";
+        document.getElementById("content").style.marginLeft = "0";
+        document.getElementById("asideRight").style.width = "35%";
+    }
+</script>
