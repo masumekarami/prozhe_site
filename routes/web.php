@@ -17,3 +17,12 @@ Route::get('/', function () {
 
 Route::post('gallerys/index','GalleryController@index');
 Route::get('gallery','GalleryController@show');
+
+Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'LoginController@index');
+Route::post('/pincode','LoginController@login');
+Route::get('/verify','LoginController@verify');
+
+
