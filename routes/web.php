@@ -15,14 +15,26 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('gallerys/index','GalleryController@index');
-Route::get('gallery','GalleryController@show');
+Route::resource('/gallerys', 'GalleryController', ['only' => ['index', 'show']]);
+
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home', 'LoginController@index');
 Route::post('/pincode','LoginController@login');
 Route::get('/verify','LoginController@verify');
+
+
+
+Route::post('articles/index','ArticleController@index');
+Route::get('articles','ArticleController@show');
+
+Route::get('about','AboutController@index');
+Route::get('about/{post}','AboutController@show');
+
+
+Route::resource('/gallerys', 'GalleryController', ['only' => ['index', 'show']]);
+
+
 
 

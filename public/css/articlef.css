@@ -1,0 +1,307 @@
+body{
+    margin: auto;
+    background-color: #bddeff !important;
+}
+.asideLeft{
+    position: absolute;
+    left: 0;
+    width: 10%;
+    height:100vh;
+    background-color: #93c3f1;
+}
+#LogoGallery {
+    width:55%;
+    /* height: 18%; */
+    float: right;
+    position: relative;
+    margin-top: -52%;
+    margin-right: -16%;
+
+}
+.asideLeft h2{
+    position: fixed;
+    bottom: 0;
+    color: #5280a9;
+    left: 2.9%;
+}
+.content{
+    padding-bottom:0;
+    position: absolute;
+    left: 10%;
+    width: 55%;
+    height: 100vh;
+    background-color: #bddeff;
+}
+.article a{
+    position: relative;
+    top: 50px;
+    left: 50px;
+    font-size: 16px;
+    width: 80%!important;
+    height: 85vh!important;
+    overflow-y: scroll!important;
+    font-family: IRANSans;
+    font-weight: bold;
+}
+.article::-webkit-scrollbar{
+    width: 1em;
+}
+.article::-webkit-scrollbar-thumb{
+    background-color: #bddeff;
+    outline: 1px solid slategray;
+}
+.closebtnEnd {
+    position: fixed !important;
+    bottom: 0!important;
+    left: -15%!important;
+    /*margin-top: 88vh;*/
+    font-size: 30px!important;
+    margin-left: 50%!important;
+    background-image: url("../img/CloseIcon/Close-Window-Article.png");
+    background-size: cover!important;
+    width: 50px!important;
+    height: 50px!important;
+    border: none!important;
+    color: #5883b2!important;
+    background-color: #bddeff!important;
+
+}
+.closebtnEnd:hover{
+    text-decoration: none!important;
+    color: #bddeff!important;
+
+}
+.closebtnEnd:link{
+    border:none!important;
+}
+.asideRight{
+    background-color: #93c3f3;
+    position: absolute;
+    right: 0;
+    width: 35%;
+    height: 100vh;
+}
+.asideRight h4{
+    position: relative;
+    padding-top: 10%;
+    padding-left: 10%;
+    font-family: IRANSans;
+    /*font-size: 16px;*/
+}
+#p{
+    overflow-y: scroll;
+    height: 400px!important;
+}
+.asideRight p{
+    position: relative;
+    padding-top: 2%;
+    padding-left: 10%;
+    width: 95%;
+    font-size: 18px;
+    font-family: IRANSans;
+    text-align: justify;
+}
+#p::-webkit-scrollbar{
+    width: 1em;
+}
+#p::-webkit-scrollbar-thumb{
+    background-color: #93c3f1;
+    outline: 1px solid slategray;
+}
+/*...........................................*/
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #bddeff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #5683aa;
+    display: block;
+    transition: 0.3s;
+    text-decoration: none;
+
+}
+.sidenav a:hover {
+    color: #5683aa;
+    text-decoration: none;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+
+
+/*body{*/
+    /*margin: auto;*/
+    /*background-color: #bddeff !important;*/
+/*}*/
+/*.asideLeft{*/
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*width: 10%;*/
+    /*height:100vh;*/
+    /*background-color: #93c3f1;*/
+/*}*/
+/*#LogoGallery {*/
+    /*width:55%;*/
+    /*!* height: 18%; *!*/
+    /*float: right;*/
+    /*position: relative;*/
+    /*margin-top: -52%;*/
+    /*margin-right: -16%;*/
+
+/*}*/
+/*.asideLeft h2{*/
+    /*position: fixed;*/
+    /*bottom: 0;*/
+    /*color: #5280a9;*/
+    /*left: 2.9%;*/
+/*}*/
+/*.content{*/
+    /*padding-bottom:0;*/
+    /*position: absolute;*/
+    /*left: 10%;*/
+    /*width: 55%;*/
+    /*height: 100vh;*/
+    /*background-color: #bddeff;*/
+/*}*/
+/*.article a{*/
+    /*position: relative;*/
+    /*top: 50px;*/
+    /*left: 50px;*/
+    /*font-size: 16px;*/
+    /*width: 80%!important;*/
+    /*height: 85vh!important;*/
+    /*overflow-y: scroll!important;*/
+    /*font-family: IRANSans;*/
+    /*font-weight: bold;*/
+/*}*/
+/*.article::-webkit-scrollbar{*/
+    /*width: 1em;*/
+/*}*/
+/*.article::-webkit-scrollbar-thumb{*/
+    /*background-color: #bddeff;*/
+    /*outline: 1px solid slategray;*/
+/*}*/
+/*.closebtnEnd {*/
+    /*position: fixed;*/
+    /*bottom: 0;*/
+    /*left: -15%;*/
+    /*!*margin-top: 88vh;*!*/
+    /*font-size: 30px;*/
+    /*margin-left: 50%;*/
+    /*background-image: url("../img/CloseIcon/Close-Window-Article.png");*/
+    /*background-size: cover;*/
+    /*width: 50px;*/
+    /*height: 50px;*/
+    /*border: none;*/
+    /*color: #5883b2;*/
+    /*background-color: #bddeff;*/
+
+/*}*/
+/*.closebtnEnd:hover{*/
+    /*text-decoration: none;*/
+    /*color: #bddeff;*/
+
+/*}*/
+/*.closebtnEnd:link{*/
+    /*border:none;*/
+/*}*/
+/*.asideRight{*/
+    /*background-color: #93c3f3;*/
+    /*position: absolute;*/
+    /*right: 0;*/
+    /*width: 35%;*/
+    /*height: 100vh;*/
+/*}*/
+/*.asideRight h4{*/
+    /*position: relative;*/
+    /*padding-top: 10%;*/
+    /*padding-left: 10%;*/
+    /*font-family: IRANSans;*/
+    /*!*font-size: 16px;*!*/
+/*}*/
+/*.asideRight p{*/
+    /*position: relative;*/
+    /*padding-top: 5%;*/
+    /*padding-left: 10%;*/
+    /*width: 95%;*/
+    /*font-size: 18px;*/
+    /*font-family: IRANSans;*/
+    /*text-align: justify;*/
+/*}*/
+/*!*...........................................*!*/
+
+/*.sidenav {*/
+    /*height: 100%;*/
+    /*width: 0;*/
+    /*position: fixed;*/
+    /*z-index: 1;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*background-color: #bddeff;*/
+    /*overflow-x: hidden;*/
+    /*transition: 0.5s;*/
+    /*padding-top: 60px;*/
+/*}*/
+
+/*.sidenav a {*/
+    /*padding: 8px 8px 8px 32px;*/
+    /*text-decoration: none;*/
+    /*font-size: 25px;*/
+    /*color: #5683aa;*/
+    /*display: block;*/
+    /*transition: 0.3s;*/
+    /*text-decoration: none;*/
+
+/*}*/
+/*.sidenav a:hover {*/
+    /*color: #5683aa;*/
+    /*text-decoration: none;*/
+/*}*/
+
+/*.sidenav .closebtn {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*right: 25px;*/
+    /*font-size: 36px;*/
+    /*margin-left: 50px;*/
+/*}*/
+
+/*#main {*/
+    /*transition: margin-left .5s;*/
+    /*padding: 16px;*/
+/*}*/
+
+/*@media screen and (max-height: 450px) {*/
+    /*.sidenav {padding-top: 15px;}*/
+    /*.sidenav a {font-size: 18px;}*/
+/*}*/
