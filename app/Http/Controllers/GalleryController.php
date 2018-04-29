@@ -11,28 +11,14 @@ use Illuminate\Support\Facades\Input;
 
 class GalleryController extends Controller
 {
-    public function index()
-    {
-//        $gallery = DB::table('gallerys')->get();
-//
-//        return view('gallerys.gallery',compact('gallery'));
-
-        $result = Input::get('GalleryId');
-        if (empty($result)) {
-            echo "No Result Found";
-        } else {
-            $detail = Gallery::where('id', $result)->first();
-            $result = $detail->image_url;
-            return $result;
-
-        }
+    public function index() {
+        $gallery = Gallery::all();
+        $upload='http://project.local:8090';
+        return view('gallerys.index', compact('gallery','upload'));
     }
 
-    public function show()
-    {
-        $gallery = DB::table('galleries')->get();
-        return view('gallerys.index',compact('gallery'));
-
+    public function show($id) {
+        return response()->json(Gallery::whereId($id)->first(['image_url', 'video_url']));
     }
 
 }

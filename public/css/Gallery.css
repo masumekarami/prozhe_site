@@ -34,7 +34,7 @@ body{
 .asideRight{
     background-color: #94f4e9;
     position: absolute;
-    right: 0;
+    right:400px;
     width: 35%;
     height: 100vh;
 }
@@ -107,7 +107,7 @@ body{
     font-size: 30px;
     margin-left: 50%;
     color: #78c2bb;
-    background-image: url("../../public/img/CloseIcon/Close-Window-Gallery.png");
+    background-image: url("../../public/img/CloseIcon/Close-Window-Gallery.png")!important;
     background-size: cover;
     background-color: #c8fffa;
     width: 50px;
@@ -122,12 +122,12 @@ body{
 .closebtnEnd:link{
     border:none;
 }
-video{
+.VIDEO{
     width: 90%;
     height: auto;
     position: relative;
-    left: 5%;
-    top: 20%;
+    left: 81%;
+   margin-top: 20%!important;
 }
 /*...........................................*/
 
@@ -339,22 +339,31 @@ li {
     background-size: cover!important;
 
 }
+.image video{
+    position: relative;
+    left: 0;
+    width: 100% !important;
+    height: 100%!important;
+    background-size: cover!important;
+
+}
 .li1{
-    width: 30%;
-    height: 35vh;
+    width: 300px;
+    height: 200px;
 
 }
 .li2{
     width: 40%;
-    height: 35vh;
+    height: 30vh;
 }
 .li3{
     width: 30%;
     height: 35vh;
 }
 .li4{
-    width: 40%;
-    height: 40vh;
+    /*background-color: #00aa00;*/
+    width: 260px;
+    height: 200px!important;
 }
 .li5{
     width: 30%;

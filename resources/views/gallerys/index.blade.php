@@ -23,44 +23,48 @@
             </div>
             <h2>Gallery</h2>
         </div>
-        <div id="asideRight" class="asideRight">
-            {{--<video controls>--}}
-                {{--<source src="VideoGallery/mov_bbb.mp4" type="video/mp4">--}}
-                {{--<source src="VideoGallery/mov_bbb.ogg" type="video/ogg">--}}
-                {{--Your browser does not support HTML5 video.--}}
-            {{--</video>--}}
+        <div id="asideRight"  class="asideRight">
+
+            <div class="VIDEO">
+
+            </div>
         </div>
+        {{--<div style="height: 200px;width: 300px" id="asideRight">--}}
+
+        {{--</div>--}}
+
         <div id="content" class="content">
             <ul id="SearchHide">
-                <div stateid="5" id="StateId" style="display: none;"></div>
-                <div cityid="88" id="CityId" style="display: none;"></div>
                 <div id="LoadPlaceAjax">
                     @foreach($gallery as $gallerys)
-                        <a id="gallery" data-id="{{ $gallerys->id }}" href="">
-                            <li class="li1">
-                        <i class="featured-place-group ">
-                                @if($gallerys->type==1)
-                                    <div class="image">
-                                        <img src="img/testjpg/{{$gallerys->image_url}}"/>
-                                    </div>
-                        </i>
-                    </li></a>
 
-                    <li class="li3">
-                        <i class="featured-place-group ">
-                            @elseif($gallerys->type==2)
-                                <div class="image">
-                                    <video controls>
-                                        <source src="VideoGallery/{{$gallerys->video_url}}" type="video/mp4">
-                                        <source src="VideoGallery/{{$gallerys->video_url}}" type="video/ogg">
-                                    </video>
-                                </div>
-                            @endif
-                        </i>
-                    </li>
+                        @if(!empty($gallerys->image_url))
+                            <a class="galleryy" data-id="{{ $gallerys->id }}" href="">
+                                <li class="li1">
+                                    <i class="featured-place-group "></i>
+                                    <div class="image">
+                                        <img src="{{$upload}}/{{$gallerys->image_url}}"/>
+                                    </div>
+                                </li></a>
+                        @elseif(!empty($gallerys->prev_url))
+                            <a class="galleryy" data-id="{{ $gallerys->id }}" href="">
+                                <li class="li4">
+                                    <i class="featured-place-group "></i>
+                                    <div class="image">
+                                        <img src="{{$upload}}/{{$gallerys->prev_url}}"/>
+
+                                        {{--<p>{{$gallerys->title}}</p>--}}
+                                        {{--<video controls>--}}
+                                        {{--<source src="{{$upload}}/{{$gallerys->prev_url}}" type="video/mp4">--}}
+                                        {{--<source src="{{$upload}}/{{$gallerys->video_url}}" type="video/ogg">--}}
+                                        {{--</video>--}}
+                                    </div>
+                                </li>
+                            </a>
+                    @endif
                 @endforeach
 
-                    <!--.......................................................-->
+                <!--.......................................................-->
 
                 </div>
 
@@ -99,19 +103,32 @@
     </script>
 
     <script>
-        $(document).on('click', '#gallery', function (e) {
+        $(document).on('click', '.galleryy', function (e) {
             e.preventDefault();
             var $this = $(this);
             $.ajax({
-                type: "POST",
-                url: "/gallerys/index",
-                data: {GalleryId : $this.closest('a').data('id'), "_token": "{{csrf_token()}}"},
-                success: function (result) {
+                type: "GET",
+                url: "/gallerys/" + $this.closest('a').data('id'),
+                success: function (result)   // A function to be called if request succeeds
+                {
                     console.log(result);
-                    $('#asideRight').html(result);
+                    if(result.image_url != '')
+                    {
+                        var path = '{{$upload}}/'+ result.image_url;
+                        $('<img  />').attr('src', path)
+                        $('#asideRight').html('<img class="VIDEO" type="hidden" src="'+path+'" >');
+                    }
+                    else if(result.video_url != '')
+                    {
+                        var path = '{{$upload}}/'+ result.video_url;
+                        $('<video></video>').attr('src', path)
+                        $('#asideRight').html(' <video class="VIDEO" controls>'+'<source type="video/mp4" src="'+path+'" >'+'</video>');
+
+                    }
 
                 }
             });
         });
     </script>
+
 @stop

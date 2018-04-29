@@ -33,7 +33,6 @@ Route::get('about','AboutController@index');
 Route::get('about/{post}','AboutController@show');
 
 
-Route::resource('/gallerys', 'GalleryController', ['only' => ['index', 'show']]);
 
 
 
